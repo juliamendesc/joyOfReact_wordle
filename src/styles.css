@@ -242,4 +242,9 @@ h1 {
   border-radius: 4px;
   padding: 8px 16px;
   font-weight: 800;
+
+  @media (max-width: 25rem) {
+    bottom: 120px;
+    right: 10px;
+  }
 }
