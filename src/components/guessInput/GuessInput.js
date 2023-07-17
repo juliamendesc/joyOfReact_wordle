@@ -15,7 +15,10 @@ function GuessInput({ guesses, setGuesses, answer, isSolved, restartGame }) {
     <div className="happy banner">
       <p>
         <strong>Congratulations!</strong> Got it in{' '}
-        <strong>{guesses.length} guesses</strong>.
+        <strong>
+          {guesses.length === 1 ? '1 guess' : `${guesses.length} guesses`}
+        </strong>
+        .
       </p>
     </div>
   )
@@ -42,12 +45,13 @@ function GuessInput({ guesses, setGuesses, answer, isSolved, restartGame }) {
             type="text"
             value={guess}
             onChange={event => {
-              setGuess(event.target.value.toUpperCase())
+              const nextGuess = event.target.value.toUpperCase()
+              setGuess(nextGuess)
             }}
-            pattern=".{5,}"
             required
-            title="5 to 10 characters"
+            minLength={5}
             maxLength={5}
+            pattern="[a-zA-Z]{5}"
           />
         )}
         <button className="restart-button" type="submit" onClick={restartGame}>
