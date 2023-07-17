@@ -230,3 +230,16 @@ h1 {
     transform: translateY(0%);
   }
 }
+
+/* --------- Personal CSS ---------- */
+
+.restart-button {
+  position: absolute;
+  bottom: 45px;
+  right: 225px;
+  background-color: black;
+  color: white;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-weight: 800;
+}
