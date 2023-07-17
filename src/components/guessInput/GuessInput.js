@@ -54,7 +54,7 @@ function GuessInput({ guesses, setGuesses, answer, isSolved, restartGame }) {
             pattern="[a-zA-Z]{5}"
           />
         )}
-        <button className="restart-button" onClick={restartGame}>
+        <button className="restart-button" type="reset" onClick={restartGame}>
           Restart
         </button>
       </div>
